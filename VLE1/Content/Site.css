@@ -1,0 +1,268 @@
+﻿/*
+	  /$$$$$$                                                   /$$
+	 /$$__  $$                                                 | $$
+	| $$  \__/  /$$$$$$  /$$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$ | $$
+	| $$ /$$$$ /$$__  $$| $$__  $$ /$$__  $$ /$$__  $$|____  $$| $$
+	| $$|_  $$| $$$$$$$$| $$  \ $$| $$$$$$$$| $$  \__/ /$$$$$$$| $$
+	| $$  \ $$| $$_____/| $$  | $$| $$_____/| $$      /$$__  $$| $$
+	|  $$$$$$/|  $$$$$$$| $$  | $$|  $$$$$$$| $$     |  $$$$$$$| $$
+	 \______/  \_______/|__/  |__/ \_______/|__/      \_______/|__/
+*/
+html {
+	position: relative;
+	min-height: 100%;
+}
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 70px;
+	margin-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .body-content {
+        padding: 0;
+    }
+}
+
+/* General fixing of shit */
+*:focus {
+	outline: none !important;
+}
+
+a,
+a:visited,
+a:visited:hover,
+a:visited:focus {
+	color: inherit;
+	color: unset;
+	font-weight: bold;
+}
+
+a:hover,
+a:focus,
+a:visited:hover,
+a:visited:focus {
+	text-decoration: underline;
+}
+
+/*Change mobile nav @media breakpoint*/
+@media (max-width: 991px) {
+	.navbar-header {
+		float: none;
+		margin-right: -15px !important;
+	}
+	.navbar-left,.navbar-right {
+		float: none !important;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	.navbar-collapse.collapse {
+		display: none!important;
+	}
+	.navbar-nav {
+		float: none!important;
+		margin-top: 7.5px;
+		margin-bottom: 7.5px;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.navbar-nav>li {
+		float: none;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.collapse.in{
+		display:block !important;
+	}
+	.container {
+		width: initial;
+		width: unset;
+	}
+}
+/*
+	 /$$      /$$                       /$$
+	| $$$    /$$$                      | $$
+	| $$$$  /$$$$  /$$$$$$   /$$$$$$$ /$$$$$$    /$$$$$$   /$$$$$$
+	| $$ $$/$$ $$ |____  $$ /$$_____/|_  $$_/   /$$__  $$ /$$__  $$
+	| $$  $$$| $$  /$$$$$$$|  $$$$$$   | $$    | $$$$$$$$| $$  \__/
+	| $$\  $ | $$ /$$__  $$ \____  $$  | $$ /$$| $$_____/| $$
+	| $$ \/  | $$|  $$$$$$$ /$$$$$$$/  |  $$$$/|  $$$$$$$| $$
+	|__/     |__/ \_______/|_______/    \___/   \_______/|__/
+*/
+.navbar {
+	background-color: #eee;
+	border: 0;
+	border-bottom: 3px solid #C41030;
+	border-radius: 0;
+	transition: top 0.2s ease-out;
+	margin: 0 !important;
+}
+.nav-up {
+	top: -70px;
+}
+
+.navbar .navbar-nav {
+
+}
+
+/*           Navbar-Logo          */
+.navbar .navbar-brand {
+	height: auto;
+	color: #C41030;
+}
+/*           Navbar-Logo:hover          */
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+	background-color: #C41030;
+	color: #eee;
+}
+
+/*           Navbar-burger          */
+.navbar .navbar-toggle {
+	background-color: #fff;
+}
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus {
+	background-color: #C41030;
+	border-color: #C41030;
+}
+/*           Navbar-burger lines         */
+.navbar .navbar-toggle .icon-bar {
+	background-color: #C41030;
+}
+.navbar .navbar-toggle:focus .icon-bar,
+.navbar .navbar-toggle:hover .icon-bar {
+	background-color: #fff;
+}
+
+
+/*           Non-active links          */
+.navbar .navbar-nav li a {
+	color: #666;
+}
+/*           Non-active links:hover          */
+.navbar .navbar-nav > li > a:focus,
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > .open > a {
+}
+@media only screen and (min-width: 992px) {
+	.navbar .navbar-nav li a {
+		margin-right: 4px;
+		border-radius: 10px 10px 0 0;
+	}
+}
+
+/*           Active links          */
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:focus,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .open > a {
+	background-color: #fff;
+	color: #263A40;
+}
+
+.navbar .navbar-nav > li > .profile-tab {
+	background-color: #8871B5;
+	color: #fff;
+}
+
+.navbar .navbar-nav > li > .profile-tab:focus,
+.navbar .navbar-nav > li > .profile-tab:hover,
+.navbar .navbar-nav > .active > .profile-tab,
+.navbar .navbar-nav > .active > .profile-tab:focus,
+.navbar .navbar-nav > .active > .profile-tab:hover {
+	background-color: #584975;
+	color: #fff;
+}
+
+
+/*           dropdown-menu links:hover          */
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover {
+
+}
+/*            Active dropdown-menu links          */
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+
+}
+
+@media only screen and (max-width: 992px) {
+	.navbar .navbar-nav li a {
+		text-align: center;
+	}
+}
+/* Display nav dropdowns on hover 
+.nav .dropdown:hover ul.dropdown-menu {
+	display: block;
+}
+ Disable the above behaviour on mobile screens. Frig this took me ages to work out.
+@media only screen and (max-width:767px) {
+	.dropdown-menu {
+		display: none !important;
+	}
+
+	.open .dropdown-menu {
+		display: block !important;
+	}
+}
+*/
+
+.navbar-right .badge {
+	padding: 3px 6px;
+	font-size: 10px;
+	background-color: #C41030;
+	transform: translate(-2px,-6px);
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+    background-color: #333;
+    color: #aaa;
+    text-align: center;
+	margin: 0;
+}
+footer p {
+	margin: 0;
+}
