@@ -48,7 +48,10 @@
 		<div class="col-sm-4">
 			<div class="panel panel-default">
 				<div class="panel-heading">Library</div>
-				<div class="panel-body">Panel Body</div>
+				<div class="panel-body">
+                    <asp:ListBox ID="ListBox1" runat="server" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="name"></asp:ListBox>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM testtable"></asp:SqlDataSource>
+                </div>
 			</div>
 		</div>
 
